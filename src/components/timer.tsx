@@ -16,13 +16,13 @@ console.log("dif - " + dif);
 }
 
 const returnTime = (time: number) => {
-    if (time < 0) {
-        return (`00`)
-    } else if (time < 10) {
-        return (`0${time}`)
-    } else {
+    //if (time < 0) {
+       // return (`00`)
+   // } else if (time < 10) {
+   //     return (`0${time}`)
+   // } else {
         return time
-    }
+    //}
 }
 
 
