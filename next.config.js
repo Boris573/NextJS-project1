@@ -5,3 +5,5 @@ module.exports = {
     domains: ['rylik.ru'],
   },
 };
+
+  
