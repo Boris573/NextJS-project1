@@ -7,7 +7,7 @@ import styles from '../../styles/Home.module.css'
 const useDifference = (t: string, zone: string) => {
 
     
-    let time: any = new Date(`2021-02-24T${t}${zone}`)
+    let time: any = new Date(`2021-02-21T${t}${zone}`)
     let localTime: any = new Date();
         console.log("time - " + time + "local time - " + localTime);
     let dif: number = time - localTime;
