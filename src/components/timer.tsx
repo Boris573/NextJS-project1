@@ -4,8 +4,8 @@ import styles from '../../styles/Home.module.css'
 
 
 const useDifference = (t: string, zone: string) => {
-    let time: Date = new Date(`2021-02-21T${t}${zone}`)
-    let localTime: Date = new Date();
+    let time: any = new Date(`2021-02-21T${t}${zone}`)
+    let localTime: any = new Date();
     
     let dif: number = time - localTime;
 
@@ -55,7 +55,7 @@ const Timer = () => {
         <div className={styles.timer}>
             {time(millisec)}
             <div className={styles.video}>            
-                <iframe className={active ? styles.activeVideo : styles.justVideo} width="250" height="150" src="https://www.youtube.com/embed/0idvYIGCiG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+                <iframe className={active ? styles.activeVideo : styles.justVideo} width="250" height="150" src="https://www.youtube.com/embed/0idvYIGCiG8" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>        
             </div>
         </div>
     )

@@ -2,8 +2,6 @@ import * as React from 'react'
 import {useState} from 'react'
 import styles from '../../styles/Home.module.css'
 import Image from 'next/image'
-import RightArr from '../images/right.svg'
-import LeftArr from '../images/left.svg'
 
 const photos: string[] = [
     "http://rylik.ru/uploads/posts/2013-07/1373234069_3.jpg",
@@ -18,7 +16,7 @@ const Galery = () => {
 
     const [now, setNow] = useState<number>(0)
 
-    const dots: string[] = photos.map((item, i: number) => {
+    const dots = photos.map((item, i: number) => {
         return (
             <div key={i}  
                 className={now === i ? styles.activeDot : styles.dot}
@@ -52,10 +50,11 @@ const Galery = () => {
         <div className={styles.galery}>
         <div className={styles.photos}>
             <div className={styles.arrows}>
-                <LeftArr 
+                <Image 
+                    src="/left.svg"
                     className={styles.arr}
-                    width="100"
-                    height="150"
+                    width="100px"
+                    height="150px"
                     onClick={() => nextPhoto(-1)}/>
             </div>
             <Image 
@@ -66,7 +65,8 @@ const Galery = () => {
                 height='450px'            
             />  
             <div className={styles.arrows}>
-                <RightArr 
+                <Image 
+                    src="/right.svg"
                     className={styles.arr}
                     width="100"
                     height="150"
