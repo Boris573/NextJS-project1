@@ -5,7 +5,7 @@ import styles from '../../styles/Home.module.css'
 
 
 const useDifference = (t: string, zone: string) => {
-    let time: any = new Date(`2021-02-21T${t}${zone}`)
+    let time: any = new Date(`2021-02-24T${t}${zone}`)
     let localTime: any = new Date();
     
     let dif: number = time - localTime;
@@ -25,7 +25,7 @@ const returnTime = (time: number) => {
 
 
 const Timer = () => {
-    let timeDif: number = useDifference("19:00", '+03:00');
+    let timeDif: number = useDifference("10:00", '+03:00');
     const [active, setActive] = useState<boolean>(false)
     const [millisec, setMillisec] = useState<number>(timeDif);
 
