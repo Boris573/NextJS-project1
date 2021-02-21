@@ -25,7 +25,7 @@ const returnTime = (time: number) => {
 
 
 const Timer = () => {
-    let timeDif: number = useDifference("15:00", '+03:00');
+    let timeDif: number = useDifference("19:00", '+03:00');
     const [active, setActive] = useState<boolean>(false)
     const [millisec, setMillisec] = useState<number>(timeDif);
 
