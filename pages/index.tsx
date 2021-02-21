@@ -11,7 +11,7 @@ export default function Home() {
 
       <Head>
         <title>Project</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <header className={styles.header}>
@@ -27,10 +27,6 @@ export default function Home() {
           <Timer />
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        
-      </footer>
 
     </div>
   )

@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
     "next": "10.0.7",
     "next-images": "^1.7.0",
     "react": "17.0.1",
