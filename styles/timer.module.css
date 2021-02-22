@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .timer {
   margin-top: 20px;
   font-size: 3rem;
@@ -21,28 +20,4 @@
 
 .activeVideo {
   display: block;
-=======
-.timer {
-  margin-top: 20px;
-  font-size: 3rem;
-  margin-left: -10px;
-  margin-right: -10px;
-  color:rgb(51, 51, 51)
-}
-
-.justVideo {
-  display: none;
-}
-
-.video {
-  margin-top: 10px;
-
-  width: 250px;
-    height: 150px;
-  background-color:rgb(187, 187, 187);
-}
-
-.activeVideo {
-  display: block;
->>>>>>> 0c8fc49949809de099d5925858e142789bb8b6ad
 }
