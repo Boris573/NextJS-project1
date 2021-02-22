@@ -10,14 +10,14 @@ const useDifference = (t: string, zone: string) => {
     return dif
 }
 
-const returnTime = (time: number) => {
+const timeToRender = (time: number) => {
     if (time < 0) {
-        return (`00`)
-    } else if (time < 10) {
+        return ('00')
+    } 
+    if (time < 10) {
         return (`0${time}`)
-    } else {
-        return time
-    }
+    } 
+    return time
 }
 
 
@@ -28,10 +28,10 @@ const Timer = () => {
     const [active, setActive] = useState<boolean>(false)
     const [millisec, setMillisec] = useState<number>(timeDif);
 
-    const time = (time: number) => {
+    const time = (timeInMillisec: number) => {
 
-        if (time <= 0 && !active) {
-            time = 0
+        if (timeInMillisec <= 0 && !active) {
+            timeInMillisec = 0
             setActive(true);
             return <div className={styles.time}>00 : 00 : 00</div>
         }
@@ -39,11 +39,11 @@ const Timer = () => {
         const second: number = 1000;
         const minute: number = second * 60;
         const hour: number = minute * 60;
-        const hours: number = Math.floor(time / hour);
-        const minutes: number = Math.floor((time % hour) / minute);
-        const seconds: number = Math.floor((time % minute) / second);        
+        const hours: number = Math.floor(timeInMillisec / hour);
+        const minutes: number = Math.floor((timeInMillisec % hour) / minute);
+        const seconds: number = Math.floor((timeInMillisec % minute) / second);        
         
-        return <div className={styles.time}>{returnTime(hours)} : {returnTime(minutes)} : {returnTime(seconds)}</div>
+        return <div className={styles.time}>{timeToRender(hours)} : {timeToRender(minutes)} : {timeToRender(seconds)}</div>
     }
 
 

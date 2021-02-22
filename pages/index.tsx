@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import GetPost from '../src/components/getPost'
+import TextFromServer from '../src/components/textFromServer'
 import Galery from '../src/components/galery'
 import Timer from '../src/components/timer'
 
@@ -23,7 +23,7 @@ export default function Home() {
       <main className={styles.main}>
         <Galery />
         <div className={styles.side}>
-          <GetPost/> 
+          <TextFromServer/> 
           <Timer />
         </div>
       </main>

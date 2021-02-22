@@ -13,20 +13,20 @@ const photos: string[] = [
 
 const Galery = () => {
 
-    const [now, setNow] = useState<number>(0)
+    const [activeIndex, setActiveIndex] = useState<number>(0)
 
     const dots = photos.map((photoURL, i: number) => {
         return(
             <div key={photoURL}  
-                className={now === i ? styles.activeDot : styles.dot}
-                onClick={() => setNow(i)}>    
+                className={activeIndex === i ? styles.activeDot : styles.dot}
+                onClick={() => setActiveIndex(i)}>    
             </div>
         )
     })
 
     const nextPhoto = (direction: number) => {
-        setNow(() => {
-            let newNumber: number = now;
+        setActiveIndex(() => {
+            let newNumber: number = activeIndex;
             if (direction === -1) {
                 if (newNumber === 0) {
                     newNumber = photos.length - 1;
@@ -58,7 +58,7 @@ const Galery = () => {
             </div>
             <Image 
                 className={styles.photo}
-                src={photos[now]}
+                src={photos[activeIndex]}
                 alt='Picture of the author'
                 width='800px'
                 height='450px'            
