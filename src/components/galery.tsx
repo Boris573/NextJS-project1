@@ -26,22 +26,21 @@ const Galery = () => {
 
     const nextPhoto = (direction: number) => {
         setActiveIndex(() => {
-            let newNumber: number = activeIndex;
+            // const newNumber: number = activeIndex;
             if (direction === -1) {
-                if (newNumber === 0) {
-                    newNumber = photos.length - 1;
-                } else {
-                    newNumber--;
+                if (activeIndex === 0) {
+                    return photos.length - 1;
                 }
-            } else if (direction === 1) {
-                if (newNumber === photos.length - 1) {
-                    newNumber = 0;
-                } else {
-                    newNumber++;
-                }
+                return activeIndex - 1;
+            } 
+            if (direction === 1) {
+                if (activeIndex === photos.length - 1) {
+                    return 0;
+                }                 
+                return activeIndex + 1;
             }
             
-            return newNumber;
+            // return newNumber;
         });
     }
 

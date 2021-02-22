@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .galery {
   display: flex;
   flex-direction: column;
@@ -63,4 +64,71 @@
     margin-right: 30px;
     margin-bottom: 20px;
   }
+=======
+.galery {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+
+.photos {
+  width: 800px;
+  margin: 70px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.arrows {
+  display: flex;
+  align-content: center;
+  background-color: rgb(219, 219, 219);
+}
+
+.arr{
+  margin: auto;
+  margin-top: 70px;
+  margin-right: 20px ;
+}
+
+.dots{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+}
+
+.activeDot {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(104, 104, 104);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px;
+}
+
+@media (max-width: 1000px) {
+  .dot, .activeDot {
+    height: 15px;
+  width: 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .photos {
+    width: 100%;
+    margin: 0px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+>>>>>>> 0c8fc49949809de099d5925858e142789bb8b6ad
 }
